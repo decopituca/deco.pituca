@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deco.pituca</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background-color: #fdfdfd;
+            color: #333;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            border-bottom: 1px solid #ddd;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #222;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #444;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #000;
+        }
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+        .hero p {
+            font-size: 20px;
+            color: #666;
+        }
+        section {
+            padding: 100px 50px;
+        }
+        h3 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .producto {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: #fff;
+        }
+        .producto img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .producto h4 {
+            margin: 15px 0 10px;
+            font-size: 20px;
+            color: #222;
+        }
+        .producto p {
+            font-size: 16px;
+            color: #555;
+        }
+        footer {
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #ddd;
+        }
+        footer a {
+            color: #000;
+            font-size: 18px;
+            text-decoration: none;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>deco.pituca</h1>
+    <nav>
+        <a href="#productos">Productos</a>
+        <a href="#sobre-nosotros">Sobre nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Naturaleza preservada en cada cuadro</h2>
+    <p>Cada pieza cuenta una historia, descubrí la tuya</p>
+</section>
+
+<section id="productos">
+    <h3>Nuestros cuadros</h3>
+    <div class="productos">
+        <div class="producto">
+            <img src="cuadro_personalizado.jpg" alt="Cuadro personalizado">
+            <h4>Cuadros personalizados</h4>
+            <p><strong>Medida:</strong> 10x15 cm</p>
+            <p>Realizados con fotos a elección del cliente o creadas con Inteligencia Artificial, buscando lograr la mayor fidelidad posible con la imagen original.<br>Incluyen frase y color de flores a acordar.</p>
+            <p><strong>Valor:</strong> $27.000</p>
+        </div>
+        <div class="producto">
+            <img src="cuadro_verde.jpg" alt="Cuadro verde">
+            <h4>Cuadros verdes</h4>
+            <p><strong>Medida:</strong> 18x14,5 cm</p>
+            <p>Compuestos con hojas naturales prensadas.</p>
+            <p><strong>Valor:</strong> $20.000</p>
+        </div>
+        <div class="producto">
+            <img src="cuadro_floral.jpg" alt="Cuadro floral">
+            <h4>Cuadro floral</h4>
+            <p><strong>Medida:</strong> 11x11 cm</p>
+            <p>Cuadros con flores naturales prensadas.</p>
+            <p><strong>Valor:</strong> $15.000</p>
+        </div>
+    </div>
+</section>
+
+<section id="sobre-nosotros">
+    <h3>Sobre nosotros</h3>
+    <p style="text-align: center; max-width: 700px; margin: auto; font-size: 18px; color: #555;">
+        En deco.pituca transformamos la belleza de lo efímero en piezas eternas. Cada cuadro es producto de la dedicación y del amor con el que fue construido.
+    </p>
+</section>
+
+<footer id="contacto">
+    <p>Seguinos en Instagram</p>
+    <a href="https://instagram.com/deco.pituca" target="_blank">📷 @deco.pituca</a>
+</footer>
+
+</body>
+</html>
