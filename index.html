@@ -48,7 +48,7 @@
         <nav class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <!-- Título en mayúscula -->
-                <h1 class="playfair text-2xl font-semibold text-gray-800">DECO.PITUCA</h1>
+                <h1 class="playfair text-2xl font-semibold text-gray-800 uppercase">DECO.PITUCA</h1>
                 <div class="hidden md:flex space-x-8">
                     <a href="#productos" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Productos</a>
                     <a href="#sobre-nosotros" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Sobre nosotros</a>
@@ -85,7 +85,7 @@
                     Cada pieza cuenta una historia, descubrí la tuya.
                 </p>
                 <a href="#productos" class="inline-block bg-gray-800 text-white px-8 py-4 rounded-full hover:bg-gray-700 transition-colors duration-300">
-                    Descubrir colección
+                    Descubrir productos
                 </a>
             </div>
         </div>
@@ -111,7 +111,7 @@
         <div class="p-6">
           <h3 class="playfair text-xl text-gray-800 mb-2">Cuadro Nerea</h3>
           <p class="text-gray-600 mb-4">Flores preservadas en tonos rosas en cuadro plástico (11x11 cm).</p>
-          <p class="text-2xl font-semibold text-gray-800">$20.000 ARS</p>
+          <p class="text-2xl font-semibold text-gray-800">$17.000 ARS</p>
         </div>
       </div>
 
@@ -162,8 +162,8 @@
         </div>
         <div class="p-6">
           <h3 class="playfair text-xl text-gray-800 mb-2">Cuadro Personalizado</h3>
-          <p class="text-gray-600 mb-4">Un cuadro único con tu foto favorita, frase a elección y flores preservadas que los acompañan entre placas de acrílico.(10x15 cm)</p>
-          <p class="text-2xl font-semibold text-gray-800">$27.000 ARS</p>
+          <p class="text-gray-600 mb-4">Un cuadro único con tu foto favorita, frase a elección y flores preservadas que los acompañan entre placas de acrílico. Consultar cuadros disponibles. (10x15 cm)</p>
+          <p class="text-2xl font-semibold text-gray-800">$28.000 ARS</p>
         </div>
       </div>
 
@@ -180,8 +180,8 @@
         </div>
         <div class="p-6">
           <h3 class="playfair text-xl text-gray-800 mb-2">Cuadro Personalizado</h3>
-          <p class="text-gray-600 mb-4">Un cuadro único con tu foto favorita, frase a elección y flores preservadas que los acompañan entre placas de acrílico.(21x17 cm)</p>
-          <p class="text-2xl font-semibold text-gray-800">$30.000 ARS</p>
+          <p class="text-gray-600 mb-4">Un cuadro único con tu foto favorita, frase a elección y flores preservadas que los acompañan entre placas de acrílico. Consultar cuadros disponibles. (21x17 cm)</p>
+          <p class="text-2xl font-semibold text-gray-800">$32.000 ARS</p>
         </div>
       </div>
 
@@ -227,15 +227,35 @@
         </div>
     </section>
 
-    <!-- Contacto Section -->
+      <!-- Contacto Section -->
     <footer id="contacto" class="bg-gray-800 text-white py-16">
         <div class="container mx-auto px-6 text-center">
             <h2 class="playfair text-3xl mb-8">Contacto</h2>
-            <a href="https://www.instagram.com/deco.pituca" target="_blank" class="inline-flex items-center justify-center space-x-4 bg-white/10 hover:bg-white/20 transition-colors duration-300 rounded-full px-8 py-4">
-                <i class="fab fa-instagram text-2xl instagram-hover"></i>
-                <span class="text-lg instagram-hover">@deco.pituca</span>
-            </a>
-            <p class="mt-8 text-gray-400">Seguinos en Instagram para ver nuestras últimas creaciones</p>
+
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/deco.pituca" target="_blank" 
+                   class="inline-flex items-center justify-center space-x-3 bg-white/10 hover:bg-white/20 transition-colors duration-300 rounded-full px-6 py-3">
+                    <i class="fab fa-instagram text-2xl instagram-hover"></i>
+                    <span class="text-lg instagram-hover">@deco.pituca</span>
+                </a>
+
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@deco.pituca" target="_blank" 
+                   class="inline-flex items-center justify-center space-x-3 bg-white/10 hover:bg-white/20 transition-colors duration-300 rounded-full px-6 py-3">
+                    <i class="fab fa-tiktok text-2xl"></i>
+                    <span class="text-lg">@deco.pituca</span>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:pituca.accesorios24@gmail.com" 
+                   class="inline-flex items-center justify-center space-x-3 bg-white/10 hover:bg-white/20 transition-colors duration-300 rounded-full px-6 py-3">
+                    <i class="fas fa-envelope text-2xl"></i>
+                    <span class="text-lg">pituca.accesorios24@gmail.com</span>
+                </a>
+            </div>
+
+            <p class="mt-8 text-gray-400">Seguinos en nuestras redes y escribinos cuando quieras 💌</p>
         </div>
     </footer>
 
