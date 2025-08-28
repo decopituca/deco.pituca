@@ -1,166 +1,270 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>deco.pituca</title>
+    <TITLE>DECO.PITUCA - CUADROS QUE PRESERVAN LA NATURALEZA</TITLE>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap');
+        
         body {
-            margin: 0;
-            font-family: 'Georgia', serif;
-            background-color: #fdfdfd;
-            color: #333;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #f8f8f8;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 50px;
-            border-bottom: 1px solid #ddd;
-            z-index: 1000;
+        
+        .playfair {
+            font-family: 'Playfair Display', serif;
         }
-        header h1 {
-            font-size: 22px;
-            font-weight: bold;
-            color: #222;
+        
+        .hero-pattern {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
         }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            color: #444;
-            transition: color 0.3s;
+        
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        nav a:hover {
-            color: #000;
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
-        .hero {
-            height: 90vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: #f0f0f0;
-            padding: 20px;
+        
+        .instagram-hover {
+            transition: color 0.3s ease;
         }
-        .hero h2 {
-            font-size: 40px;
-            margin-bottom: 15px;
-            color: #222;
-        }
-        .hero p {
-            font-size: 20px;
-            color: #666;
-        }
-        section {
-            padding: 100px 50px;
-        }
-        h3 {
-            text-align: center;
-            font-size: 28px;
-            margin-bottom: 40px;
-            color: #333;
-        }
-        .productos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        .producto {
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            background-color: #fff;
-        }
-        .producto img {
-            max-width: 100%;
-            border-radius: 5px;
-        }
-        .producto h4 {
-            margin: 15px 0 10px;
-            font-size: 20px;
-            color: #222;
-        }
-        .producto p {
-            font-size: 16px;
-            color: #555;
-        }
-        footer {
-            background-color: #f8f8f8;
-            text-align: center;
-            padding: 40px 20px;
-            border-top: 1px solid #ddd;
-        }
-        footer a {
-            color: #000;
-            font-size: 18px;
-            text-decoration: none;
-            margin-left: 10px;
-            font-weight: bold;
+        
+        .instagram-hover:hover {
+            color: #E1306C;
         }
     </style>
 </head>
-<body>
+<body class="bg-white text-gray-800">
+    <!-- Header -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <h1 class="playfair text-2xl font-semibold text-gray-800">deco.pituca</h1>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#productos" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Productos</a>
+                    <a href="#sobre-nosotros" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Sobre nosotros</a>
+                    <a href="#contacto" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Contacto</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<header>
-    <h1>deco.pituca</h1>
-    <nav>
-        <a href="#productos">Productos</a>
-        <a href="#sobre-nosotros">Sobre nosotros</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <h2>Naturaleza preservada en cada cuadro</h2>
-    <p>Cada pieza cuenta una historia, descubrí la tuya</p>
-</section>
-
-<section id="productos">
-    <h3>Nuestros cuadros</h3>
-    <div class="productos">
-        <div class="producto">
-            <img src="cuadro_personalizado.jpg" alt="Cuadro personalizado">
-            <h4>Cuadros personalizados</h4>
-            <p><strong>Medida:</strong> 10x15 cm</p>
-            <p>Realizados con fotos a elección del cliente o creadas con Inteligencia Artificial, buscando lograr la mayor fidelidad posible con la imagen original.<br>Incluyen frase y color de flores a acordar.</p>
-            <p><strong>Valor:</strong> $27.000</p>
-        </div>
-        <div class="producto">
-            <img src="cuadro_verde.jpg" alt="Cuadro verde">
-            <h4>Cuadros verdes</h4>
-            <p><strong>Medida:</strong> 18x14,5 cm</p>
-            <p>Compuestos con hojas naturales prensadas.</p>
-            <p><strong>Valor:</strong> $20.000</p>
-        </div>
-        <div class="producto">
-            <img src="cuadro_floral.jpg" alt="Cuadro floral">
-            <h4>Cuadro floral</h4>
-            <p><strong>Medida:</strong> 11x11 cm</p>
-            <p>Cuadros con flores naturales prensadas.</p>
-            <p><strong>Valor:</strong> $15.000</p>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 hidden transform transition-transform duration-300">
+        <div class="container mx-auto px-6 py-20">
+            <div class="flex flex-col space-y-6 text-center">
+                <a href="#productos" class="text-2xl text-gray-600 hover:text-gray-900 py-3">Productos</a>
+                <a href="#sobre-nosotros" class="text-2xl text-gray-600 hover:text-gray-900 py-3">Sobre nosotros</a>
+                <a href="#contacto" class="text-2xl text-gray-600 hover:text-gray-900 py-3">Contacto</a>
+            </div>
         </div>
     </div>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern min-h-screen flex items-center justify-center pt-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="playfair text-4xl md:text-6xl font-light text-gray-800 mb-6 leading-tight">
+                    Cuadros que preservan la naturaleza
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-600 mb-12 font-light">
+                    Cada pieza cuenta una historia, descubrí la tuya.
+                </p>
+                <a href="#productos" class="inline-block bg-gray-800 text-white px-8 py-4 rounded-full hover:bg-gray-700 transition-colors duration-300">
+                    Descubrir colección
+                </a>
+            </div>
+        </div>
+    </section>
+
+<!-- Productos Section -->
+<section id="productos" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="playfair text-3xl md:text-4xl text-center text-gray-800 mb-16">Nuestros cuadros</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Producto 1: Cuadro Nerea -->
+      <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100">
+        <div class="relative h-80 overflow-hidden">
+          <div class="slides flex transition-transform duration-500" data-slides>
+            <img src="Cuadro floral1.jpeg" class="w-full h-80 object-cover flex-shrink-0" alt="Cuadro floral 1">
+            <img src="Cuadro floral2.jpeg" class="w-full h-80 object-cover flex-shrink-0" alt="Cuadro floral 2">
+            <img src="Cuadro floral3.jpeg" class="w-full h-80 object-cover flex-shrink-0" alt="Cuadro floral 3">
+          </div>
+          <button class="prev absolute top-1/2 left-2 bg-white rounded-full p-2 shadow" data-prev>⬅️</button>
+          <button class="next absolute top-1/2 right-2 bg-white rounded-full p-2 shadow" data-next>➡️</button>
+        </div>
+        <div class="p-6">
+          <h3 class="playfair text-xl text-gray-800 mb-2">Cuadro Nerea</h3>
+          <p class="text-gray-600 mb-4">Flores preservadas en tonos rosas en cuadro plástico (11x11 cm).</p>
+          <p class="text-2xl font-semibold text-gray-800">$20.000 ARS</p>
+        </div>
+      </div>
+
+      <!-- Producto 2: Cuadro Oihana -->
+      <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100">
+        <div class="relative h-80 overflow-hidden">
+          <div class="slides flex transition-transform duration-500" data-slides>
+            <img src="Cuadros verdes1.jpeg" class="w-full h-80 object-cover flex-shrink-0" alt="Cuadro verde 1">
+            <img src="Cuadros verdes2.jpeg" class="w-full h-80 object-cover flex-shrink-0" alt="Cuadro verde 2">
+            <img src="Cuadros verdes3.jpeg" class="w-full h-80 object-cover flex-shrink-0" alt="Cuadro verde 3">
+          </div>
+          <button class="prev absolute top-1/2 left-2 bg-white rounded-full p-2 shadow" data-prev>⬅️</button>
+          <button class="next absolute top-1/2 right-2 bg-white rounded-full p-2 shadow" data-next>➡️</button>
+        </div>
+        <div class="p-6">
+          <h3 class="playfair text-xl text-gray-800 mb-2">Cuadro Oihana</h3>
+          <p class="text-gray-600 mb-4">Selección de hojas verdes preservadas en un marco de simil madera. (18x14,5 cm)</p>
+          <p class="text-2xl font-semibold text-gray-800">$22.000 ARS</p>
+        </div>
+      </div>
+
+      <!-- Producto 3: Cuadro Amaia -->
+      <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100">
+        <div class="relative h-80 overflow-hidden">
+          <div class="slides flex transition-transform duration-500" data-slides>
+            <img src="Cuadro Amaia1.jpeg" class="w-full h-80 object-cover flex-shrink-0" alt="Cuadro Amaia 1">
+            <img src="Cuadro Amaia2.jpeg" class="w-full h-80 object-cover flex-shrink-0" alt="Cuadro Amaia 2">
+          </div>
+          <button class="prev absolute top-1/2 left-2 bg-white rounded-full p-2 shadow" data-prev>⬅️</button>
+          <button class="next absolute top-1/2 right-2 bg-white rounded-full p-2 shadow" data-next>➡️</button>
+        </div>
+        <div class="p-6">
+          <h3 class="playfair text-xl text-gray-800 mb-2">Cuadro Amaia</h3>
+          <p class="text-gray-600 mb-4">Cuadro simil madera con doble placa de acrílico con delicadas flores preservadas (21x17cm)</p>
+          <p class="text-2xl font-semibold text-gray-800">$25.00 ARS</p>
+        </div>
+      </div>
+
+      <!-- Producto 4: Cuadro Personalizado -->
+      <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100">
+        <div class="relative h-80 overflow-hidden">
+          <div class="slides flex transition-transform duration-500" data-slides>
+            <img src="Cuadro Personalizado1.jpeg" class="w-full h-80 object-cover flex-shrink-0" alt="Cuadro personalizado 1">
+            <img src="Cuadro Personalizado2.jpeg" class="w-full h-80 object-cover flex-shrink-0" alt="Cuadro personalizado 2">
+          </div>
+          <button class="prev absolute top-1/2 left-2 bg-white rounded-full p-2 shadow" data-prev>⬅️</button>
+          <button class="next absolute top-1/2 right-2 bg-white rounded-full p-2 shadow" data-next>➡️</button>
+        </div>
+        <div class="p-6">
+          <h3 class="playfair text-xl text-gray-800 mb-2">Cuadro Personalizado</h3>
+          <p class="text-gray-600 mb-4">Un cuadro único con tu foto favorita, frase a elección y flores preservadas que los acompañan entre placas de acrílico.(10x15 cm)</p>
+          <p class="text-2xl font-semibold text-gray-800">$27.000 ARS</p>
+        </div>
+      </div>
+
+      <!-- Producto 5: Cuadro Personalizado -->
+      <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100">
+        <div class="relative h-80 overflow-hidden">
+          <div class="slides flex transition-transform duration-500" data-slides>
+            <img src="Cuadro personalizado2.1.jpeg" class="w-full h-80 object-cover flex-shrink-0" alt="Cuadro personalizado 1">
+            <img src="Cuadro personalizado2.2.jpeg" class="w-full h-80 object-cover flex-shrink-0" alt="Cuadro personalizado 2">
+            <img src="Cuadro personalizado2.3.jpeg" class="w-full h-80 object-cover flex-shrink-0" alt="Cuadro personalizado 3">
+          </div>
+          <button class="prev absolute top-1/2 left-2 bg-white rounded-full p-2 shadow" data-prev>⬅️</button>
+          <button class="next absolute top-1/2 right-2 bg-white rounded-full p-2 shadow" data-next>➡️</button>
+        </div>
+        <div class="p-6">
+          <h3 class="playfair text-xl text-gray-800 mb-2">Cuadro Personalizado</h3>
+          <p class="text-gray-600 mb-4">Un cuadro único con tu foto favorita, frase a elección y flores preservadas que los acompañan entre placas de acrílico.(21x17 cm)</p>
+          <p class="text-2xl font-semibold text-gray-800">$30.000 ARS</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<section id="sobre-nosotros">
-    <h3>Sobre nosotros</h3>
-    <p style="text-align: center; max-width: 700px; margin: auto; font-size: 18px; color: #555;">
-        En deco.pituca transformamos la belleza de lo efímero en piezas eternas. Cada cuadro es producto de la dedicación y del amor con el que fue construido.
-    </p>
-</section>
+<!-- Script Slider -->
+<script>
+  document.querySelectorAll("[data-slides]").forEach(slider => {
+    let index = 0;
+    const slides = slider.children;
+    const total = slides.length;
 
-<footer id="contacto">
-    <p>Seguinos en Instagram</p>
-    <a href="https://instagram.com/deco.pituca" target="_blank">📷 @deco.pituca</a>
-</footer>
+    const prevBtn = slider.parentElement.querySelector("[data-prev]");
+    const nextBtn = slider.parentElement.querySelector("[data-next]");
 
+    function showSlide(i) {
+      slider.style.transform = `translateX(-${i * 100}%)`;
+    }
+
+    prevBtn.addEventListener("click", () => {
+      index = (index - 1 + total) % total;
+      showSlide(index);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      index = (index + 1) % total;
+      showSlide(index);
+    });
+  });
+</script>
+
+    <!-- Sobre Nosotros Section -->
+    <section id="sobre-nosotros" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="playfair text-3xl md:text-4xl u-gray-800 mb-8">Sobre nosotros</h2>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    En deco.pituca transformamos la belleza de lo efímero en piezas eternas. Cada cuadro es producto de la dedicación y del amor con el que fue construido.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <footer id="contacto" class="bg-gray-800 text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="playfair text-3xl mb-8">Contacto</h2>
+            <a href="https://www.instagram.com/deco.pituca" target="_blank" class="inline-flex items-center justify-center space-x-4 bg-white/10 hover:bg-white/20 transition-colors duration-300 rounded-full px-8 py-4">
+                <i class="fab fa-instagram text-2xl instagram-hover"></i>
+                <span class="text-lg instagram-hover">@deco.pituca</span>
+            </a>
+            <p class="mt-8 text-gray-400">Seguinos en Instagram para ver nuestras últimas creaciones</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('translate-x-full');
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
